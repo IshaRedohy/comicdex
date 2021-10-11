@@ -7,9 +7,9 @@
     font-size: 12px !important;
 }
 body {
-    /* background-position: center; 
-    background-image: url("../images/background.jpg"); */
-    background-color: #000000e0;
+    background-position: center; 
+    /* background-image: url("../images/background.jpg"); */
+    /* background-color: #000000e0; */
     color: aliceblue;
 }
 
