@@ -27,7 +27,7 @@ const Dex = () => {
                         }}
                     />
                 </div>
-                <div className="row container-fluid">
+                <div className="row container-fluid thumbs">
                 {
                     displays.filter((val) => {
                         if (letter === "") { 
