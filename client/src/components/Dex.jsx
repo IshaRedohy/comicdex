@@ -18,35 +18,33 @@ const Dex = () => {
     }, []);
 
     return(
-        <div className = "big-image">
-            <div className = "overlay">
-                <div className = "box-div">
-                    <input type="text" className="fixed-top searchbar" placeholder="Search..."
-                        onChange={(e) => {
-                            setLetter(e.target.value);
-                        }}
-                    />
-                </div>
-                <div className="row container-fluid thumbs">
-                {
-                    displays.filter((val) => {
-                        if (letter === "") { 
-                            return val
-                        } else if (val.name.toLowerCase().includes(letter.toLocaleLowerCase())) {
-                            return val
-                        }
-                    }).map((display) => {
-                        return (
-                            <Thumbnail 
-                                key={display.index}
-                                image={display.image} 
-                                name={display.name} 
-                                index={display.index}    
-                            />
-                        )
-                    })
-                }
-                </div>
+        <div className = "mainbody">
+            <div className = "box-div">
+                <input type="text" className="fixed-top searchbar" placeholder="Search..."
+                    onChange={(e) => {
+                        setLetter(e.target.value);
+                    }}
+                />
+            </div>
+            <div className="row container-fluid thumbs">
+            {
+                displays.filter((val) => {
+                    if (letter === "") { 
+                        return val
+                    } else if (val.name.toLowerCase().includes(letter.toLocaleLowerCase())) {
+                        return val
+                    }
+                }).map((display) => {
+                    return (
+                        <Thumbnail 
+                            key={display.index}
+                            image={display.image} 
+                            name={display.name} 
+                            index={display.index}    
+                        />
+                    )
+                })
+            }
             </div>
         </div>
     )
