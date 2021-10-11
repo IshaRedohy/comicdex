@@ -18,7 +18,7 @@ const Dex = () => {
     }, []);
 
     return(
-        <div className = "mainbody">
+        <div className = "bgoverlay">
             <div className = "box-div">
                 <input type="text" className="fixed-top searchbar" placeholder="Search..."
                     onChange={(e) => {

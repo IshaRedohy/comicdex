@@ -21,7 +21,7 @@ const Individuals = () => {
     }, []);
 
     return(
-        <div>
+        <div className = "bgoverlay">
             <div className="row container-fluid">
                 <div className="col-6">
                     <h3>Groups joined: {character.groups}</h3>
