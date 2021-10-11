@@ -4,13 +4,14 @@ const express = require("express");
 const app = express();
 const Hero = require("./models/hero");                  
 const port = 5000;  
+require('dotenv').config();
 
-mongoose.connect("mongodb+srv://admin-hridoy:lhdAnelow007@cluster0.vccwk.mongodb.net/heroDB" , {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.MY_DATABASE , {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.get("/", async (req,res) => {
     try {
-        for(let i = 120; i <= 731; i++) {
-            let url = `https://superheroapi.com/api/5594445417296537/${i}`; 
+        for(let i = 1; i <= 731; i++) {
+            let url = `https://superheroapi.com/api/${process.env.API_KEY}/${i}`; 
 
             let response = await axios.get(url);
             let allData = response.data;
