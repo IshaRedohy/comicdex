@@ -1,0 +1,58 @@
+let pullData = async () => {
+    let pulledData = await axios.get(url);
+    let allData = pulledData.data;
+    //console.log(allData);
+
+    let heroName = allData.name;              //returns name of the character
+    let heroAppearance = allData.appearance;  //returns the appearence object
+    let sex = heroAppearance.gender;          //returns the gender value in appearence object
+    let heroBio = allData.biography;          //returns the biography JSON object
+    //let heroBio = JSON.parse(heroBioJson);  //converts JSON objects to JS objects BUT it's already in js object in my code
+    let fullName = heroBio['full-name'];     //to fetch JSON formatted object from an object
+    let publisher = heroBio.publisher;
+
+    let stats = allData.powerstats;        //returns the powerstats object
+
+    //-----------converting all the powerstats objects into numbers----------//
+    let intelligence = parseInt(stats.intelligence);
+    let strength = parseInt(stats.strength);
+    let speed = parseInt(stats.speed);
+    let durability = parseInt(stats.durability);
+    let power = parseInt(stats.power);
+    let combat = parseInt(stats.combat);
+
+    let baseStats = (intelligence + strength + speed + durability + power + combat);
+    //--------------and figuring out the base stat-------------------//
+
+    console.log("Name: " + heroName);
+    console.log("Gender: " + sex);
+    console.log("Full-name: " + fullName);
+    console.log("Universe: " + publisher);
+
+    return heroName;
+}
+
+
+
+0. Store Batman in database.
+
+brew services start mongodb-community@5.0
+
+1. Make everything that exists display via search/name endpoint instead of id.
+
+mongosh "mongodb+srv://cluster0.vccwk.mongodb.net/myFirstDatabase" --username admin-hridoy
+
+mongoimport --host cluster0-shard-00-01.vccwk.mongodb.net:27017 --db dummys --type json --file
+
+
+
+//Good to remember:
+
+Whenever the insert method faces a problem, it will give an error in the console but the database
+will continue to store data that returned with no error previously in the database.
+
+
+url ain't matching.
+
+
+Use handleDynamicClick function in the individual page.
