@@ -13,6 +13,11 @@ body {
     color: aliceblue;
 }
 
+.bgoverlay {
+    background: rgba(0,0,0,0.8);
+    /* position: absolute; */
+}
+
 .searchbar {
     background: #000000d6;
     width: 40%;
