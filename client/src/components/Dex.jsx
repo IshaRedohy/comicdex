@@ -19,8 +19,8 @@ const Dex = () => {
 
     return(
         <div>
-        <div>
-            <input type="text" className="fixed-top" placeholder="Search..."
+        <div className = "box-div">
+            <input type="text" className="fixed-top searchbar" placeholder="Search..."
                 onChange={(e) => {
                     setLetter(e.target.value);
                 }}

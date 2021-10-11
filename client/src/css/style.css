@@ -12,3 +12,21 @@ body {
     background-color: #000000c7;
     color: aliceblue;
 }
+
+.searchbar {
+    background: #000000d6;
+    width: 40%;
+    height: 45px;;
+    color: white;
+    margin-left: 1.6%;
+    margin-top: 1%;
+    border: none;
+}
+
+.searchbar:focus {
+    outline: none;
+}
+
+.box-div {
+    padding-bottom: 5%;
+}
