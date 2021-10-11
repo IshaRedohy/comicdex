@@ -6,3 +6,9 @@
 .names{
     font-size: 12px !important;
 }
+body {
+    /* background-position: center; 
+    background-image: url("../images/background.jpg"); */
+    background-color: #000000c7;
+    color: aliceblue;
+}

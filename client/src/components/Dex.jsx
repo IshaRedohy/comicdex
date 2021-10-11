@@ -36,7 +36,12 @@ const Dex = () => {
                     }
                 }).map((display) => {
                     return (
-                        <Thumbnail key={display.index} image={display.image} name={display.name} index={display.index}/>
+                        <Thumbnail 
+                            key={display.index}
+                            image={display.image} 
+                            name={display.name} 
+                            index={display.index}    
+                         />
                     )
                 })
             }
