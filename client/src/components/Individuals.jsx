@@ -31,14 +31,14 @@ const Individuals = () => {
                     <p>Real-name: {character.realname}          Sex:{character.sex}</p>
                 </div>
                 <div className="col-6 mt-5 svglines">
-                    <p className="combat line"><b>Combat: {character.combat}</b></p>
-                    <p className="durability line" style={{width: `${character.durability}%`}}><b>Durability: {character.durability}</b></p>
-                    <p className="speed line"><b>Speed: {character.speed}</b></p>
-                    <p className="strength line"><b>Strength: {character.strength}</b></p>
-                    <p className="intelligence line"><b>Intelligence: {character.intelligence}</b></p>
-                    <p className="power line"><b>Power: {character.power}</b></p>
+                    <p className="line" style={{width: `${character.combat}%`}}><b>Combat: {character.combat}</b></p>
+                    <p className="line" style={{width: `${character.durability}%`}}><b>Durability: {character.durability}</b></p>
+                    <p className="line" style={{width: `${character.speed}%`}}><b>Speed: {character.speed}</b></p>
+                    <p className="line" style={{width: `${character.strength}%`}}><b>Strength: {character.strength}</b></p>
+                    <p className="line" style={{width: `${character.intelligence}%`}}><b>Intelligence: {character.intelligence}</b></p>
+                    <p className="line" style={{width: `${character.power}%`}}><b>Power: {character.power}</b></p>
                     <h2 className="basestats">Basestats: {character.basestats}</h2>
-                    <p>Height: {character.height}   Weight:{character.weight}</p>
+                    <p className="struct">Height: {character.height}   Weight:{character.weight}</p>
                 </div>
             </div>
         </div>
