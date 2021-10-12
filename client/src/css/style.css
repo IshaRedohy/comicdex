@@ -68,3 +68,18 @@ body {
     padding-left: 2.5rem;
     padding-top: 15rem;
 }
+
+.line {
+    height: 25px;
+    min-width: 800px;
+    margin: 0 auto 10px;
+    /* line-height: 25px; */
+    /* font-size: 14px; */
+    color: #fff;
+    padding: 0 0 0 10px;
+    position: relative;
+}
+
+.line::before {
+    content: ' ';
+}
