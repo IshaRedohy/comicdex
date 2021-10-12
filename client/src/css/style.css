@@ -35,3 +35,19 @@ body {
 .box-div {
     padding-bottom: 5%;
 }
+
+.boofy button {
+    background: #973e3e;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 10px;
+    margin-left: 40rem;
+    margin-top: 1.5rem;
+    margin-bottom: 50vh;
+}
+
+.boofy h1 {
+    padding-top: 18rem;
+    font-weight: 300;
+}

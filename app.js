@@ -21,7 +21,7 @@ app.get("/", async (req,res) => {
             let theName = allData.name;
             let stats = allData.powerstats;  //access the powerstats object
 
-            //console.log(theName);
+            console.log(theName);
 
             let heroPic = allData.image.url;
 

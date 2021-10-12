@@ -6,10 +6,12 @@ const Home = () => {
 
     return(
         <div className = "bgoverlay">
-            <h1 className="flex text-center justify-content-center align-items-center">Welcome to Comidex</h1>
-                <Link to="/dexlist">
-                    <button>Click to begin</button>
-                </Link>
+            <div className = "boofy">
+                <h1 className="flex text-center justify-content-center align-items-center">Welcome to Comidex</h1>
+                    <Link to="/dexlist">
+                        <button>Click to begin</button>
+                    </Link>
+            </div>
         </div>
     )
 }
