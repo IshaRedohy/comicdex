@@ -32,7 +32,7 @@ const Individuals = () => {
                 </div>
                 <div className="col-6 mt-5 svglines">
                     <p className="combat line"><b>Combat: {character.combat}</b></p>
-                    <p className="durability line" style={{maxWidth: '60%'}}><b>Durability: {character.durability}</b></p>
+                    <p className="durability line" style={{width: `${character.durability}%`}}><b>Durability: {character.durability}</b></p>
                     <p className="speed line"><b>Speed: {character.speed}</b></p>
                     <p className="strength line"><b>Strength: {character.strength}</b></p>
                     <p className="intelligence line"><b>Intelligence: {character.intelligence}</b></p>
