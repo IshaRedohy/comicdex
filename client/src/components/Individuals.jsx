@@ -32,13 +32,13 @@ const Individuals = () => {
                     <p>Real-name: {character.realname}          Sex:{character.sex}</p>
                 </div>
                 <div className="col-6 mt-5 svglines">
-                    <p><b>Combat: {character.combat}</b></p>
-                    <p><b>Durability: {character.durability}</b></p>
-                    <p><b>Speed: {character.speed}</b></p>
-                    <p><b>Strength: {character.strength}</b></p>
-                    <p><b>Intelligence: {character.intelligence}</b></p>
-                    <p><b>Power: {character.power}</b></p>
-                    <h2>Basestats: {character.basestats}</h2>
+                    <p className="combat line"><b>Combat: {character.combat}</b></p>
+                    <p className="durability line"><b>Durability: {character.durability}</b></p>
+                    <p className="speed line"><b>Speed: {character.speed}</b></p>
+                    <p className="strength line"><b>Strength: {character.strength}</b></p>
+                    <p className="intelligence line"><b>Intelligence: {character.intelligence}</b></p>
+                    <p className="powe liner"><b>Power: {character.power}</b></p>
+                    <h2 className="basestats line">Basestats: {character.basestats}</h2>
                     <p>Height: {character.height}   Weight:{character.weight}</p>
                 </div>
             </div>
