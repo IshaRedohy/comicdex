@@ -19,6 +19,18 @@ const Individuals = () => {
         handleDynamic();
     }, []);
 
+    const baseColors = () => {
+        if(character.basestats >= 0 && character.basestats < 200) {
+            return "red";
+        } else if(character.basestats >= 200 && character.basestats < 400) {
+            return "yellow";
+        } else {
+            return "green";
+        }
+    }
+
+    const baseColor = baseColors();
+
     return(
         <div className = "bgoverlay">
             <div className="row container-fluid pt-2 pb-5">
@@ -46,7 +58,7 @@ const Individuals = () => {
                     <p className="line" style={{width: `${character.strength}%`}}><b>Strength: {character.strength}</b></p>
                     <p className="line" style={{width: `${character.intelligence}%`}}><b>Intelligence: {character.intelligence}</b></p>
                     <p className="line" style={{width: `${character.power}%`}}><b>Power: {character.power}</b></p>
-                    <h2 className="basestats">Basestats: {character.basestats}</h2>
+                    <h2 className="basestats" style={{color: `${baseColor}`}}>Basestats: {character.basestats}</h2>
                     <p className="struct">Height: {character.height}   Weight:{character.weight}</p>
                 </div>
             </div>
