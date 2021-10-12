@@ -31,7 +31,7 @@ const Individuals = () => {
                     <h1>{character.name}</h1>
                     <p>Real-name: {character.realname}          Sex:{character.sex}</p>
                 </div>
-                <div className="col-6 mt-5 pt-5">
+                <div className="col-6 mt-5 svglines">
                     <p><b>Combat: {character.combat}</b></p>
                     <p><b>Durability: {character.durability}</b></p>
                     <p><b>Speed: {character.speed}</b></p>
