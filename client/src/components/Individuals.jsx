@@ -21,14 +21,23 @@ const Individuals = () => {
 
     return(
         <div className = "bgoverlay">
-            <div className="row container-fluid">
+            <div className="row container-fluid pt-2 pb-5">
                 <div className="col-6">
-                    <h3>Groups joined: {character.groups}</h3>
-                    <h4>First appearance: {character.first_appearance},publisher: {character.publisher}</h4>
-                    <h4>Side: {character.side}</h4>
-                    <img src={character.image} alt=""></img>
-                    <h1>{character.name}</h1>
-                    <p>Real-name: {character.realname}          Sex:{character.sex}</p>
+                    <div className="row">
+                        <div className="col-6">
+                            <h1>{character.name}</h1>
+                            <p>Real-name: {character.realname}</p> 
+                            <p>Sex: {character.sex}</p> 
+                        </div>
+                        <div className="col-6 side">
+                            <h4>Side: {character.side}</h4>
+                            <p>Groups joined: {character.groups}</p>
+                        </div>
+                    </div>
+                    <img src={character.image} alt="" className="pt-3 hero"></img>
+                    <h5 className="mt-4">First appearance: {character.first_appearance}</h5>
+                    <h5>publisher: {character.publisher}</h5>
+                    {/* Sex:{character.sex} */}
                 </div>
                 <div className="col-6 mt-5 svglines">
                     <p className="line" style={{width: `${character.combat}%`}}><b>Combat: {character.combat}</b></p>

@@ -89,3 +89,12 @@ body {
 .struct {
     padding-left: 10px;
 }
+
+.hero {
+    width: 350px;
+}
+
+.side {
+    padding-top: 10px;
+    padding-left: 50px;
+}
