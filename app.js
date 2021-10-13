@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const express = require("express");     
 const app = express();
 const Hero = require("./models/hero");                  
-const port = 5000;  
 require('dotenv').config();
 
 mongoose.connect(process.env.MY_DATABASE , {useNewUrlParser: true, useUnifiedTopology: true});
@@ -113,4 +112,4 @@ app.get("/dexlist/:index", async (req, res) => {        //read the exact documen
     
 })
 
-app.listen(port, () => console.log(`server running on port ${port}`));
+app.listen(process.env.PORT, () => console.log(`server running on port ${process.env.PORT}`));
