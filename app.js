@@ -7,85 +7,85 @@ require('dotenv').config();
 
 mongoose.connect(process.env.MY_DATABASE , {useNewUrlParser: true, useUnifiedTopology: true});
 
-app.get("/", async (req,res) => {
-    try {
-        for(let i = 1; i <= 731; i++) {
-            let url = `https://superheroapi.com/api/${process.env.API_KEY}/${i}`; 
+// app.get("/", async (req,res) => {
+//     try {
+//         for(let i = 1; i <= 731; i++) {
+//             let url = `https://superheroapi.com/api/${process.env.API_KEY}/${i}`; 
 
-            let response = await axios.get(url);
-            let allData = response.data;
-            //console.log(allData);
+//             let response = await axios.get(url);
+//             let allData = response.data;
+//             //console.log(allData);
 
-            let serial = allData.id;
-            let theName = allData.name;
-            let stats = allData.powerstats;  //access the powerstats object
+//             let serial = allData.id;
+//             let theName = allData.name;
+//             let stats = allData.powerstats;  //access the powerstats object
 
-            console.log(theName);
+//             console.log(theName);
 
-            let heroPic = allData.image.url;
+//             let heroPic = allData.image.url;
 
-            let heroBio = allData.biography;
-            let fullName = heroBio['full-name'];
-            let Publisher = heroBio.publisher;
+//             let heroBio = allData.biography;
+//             let fullName = heroBio['full-name'];
+//             let Publisher = heroBio.publisher;
 
-            let pob = heroBio['place-of-birth'];
-            let first = heroBio['first-appearance'];
-            let align = heroBio.alignment;
+//             let pob = heroBio['place-of-birth'];
+//             let first = heroBio['first-appearance'];
+//             let align = heroBio.alignment;
 
-            let structure = allData.appearance;
-            let Sex = structure.gender;
-            let Height = structure.height[0];
-            let Weight = structure.weight[0];
+//             let structure = allData.appearance;
+//             let Sex = structure.gender;
+//             let Height = structure.height[0];
+//             let Weight = structure.weight[0];
 
-            let Groups = allData.connections['group-affiliation'];
-            let Job = allData.work.occupation;
+//             let Groups = allData.connections['group-affiliation'];
+//             let Job = allData.work.occupation;
 
-            let Intelligence = (stats.intelligence === "null") ? 0 : Number(stats.intelligence);
-            let Strength = (stats.strength === "null") ? 0 :  Number(stats.strength);
-            let Speed = (stats.speed === "null") ? 0 :  Number(stats.speed);
-            let Durability = (stats.durability === "null") ? 0 :  Number(stats.durability);
-            let Power = (stats.power === "null") ? 0 :  Number(stats.power);
-            let Combat = (stats.combat === "null") ? 0 :  Number(stats.combat);
+//             let Intelligence = (stats.intelligence === "null") ? 0 : Number(stats.intelligence);
+//             let Strength = (stats.strength === "null") ? 0 :  Number(stats.strength);
+//             let Speed = (stats.speed === "null") ? 0 :  Number(stats.speed);
+//             let Durability = (stats.durability === "null") ? 0 :  Number(stats.durability);
+//             let Power = (stats.power === "null") ? 0 :  Number(stats.power);
+//             let Combat = (stats.combat === "null") ? 0 :  Number(stats.combat);
 
-            let baseStat = (Intelligence + Strength + Speed + Durability + Power + Combat);
+//             let baseStat = (Intelligence + Strength + Speed + Durability + Power + Combat);
 
-            //--------adding hero----------//
-         const character = new Hero ({
-            index: serial-1,
-            name: theName,
-            intelligence: Intelligence,
-            strength: Strength,
-            speed: Speed,
-            durability: Durability,
-            power: Power,
-            combat: Combat,
-            basestats: baseStat,
-            image: heroPic,
-            realname: fullName,
-            publisher: Publisher,
-            place_of_birth: pob,
-            first_appearance: first,
-            side: align,
-            sex: Sex,
-            height: Height,
-            weight: Weight,
-            groups: Groups,
-            job: Job
-        });
+//             //--------adding hero----------//
+//          const character = new Hero ({
+//             index: serial-1,
+//             name: theName,
+//             intelligence: Intelligence,
+//             strength: Strength,
+//             speed: Speed,
+//             durability: Durability,
+//             power: Power,
+//             combat: Combat,
+//             basestats: baseStat,
+//             image: heroPic,
+//             realname: fullName,
+//             publisher: Publisher,
+//             place_of_birth: pob,
+//             first_appearance: first,
+//             side: align,
+//             sex: Sex,
+//             height: Height,
+//             weight: Weight,
+//             groups: Groups,
+//             job: Job
+//         });
 
-        //character.save();
+//         //character.save();
 
-        // try {
-        //     Hero.insertMany(character , {unique: true});
-        // } catch(e) {
-        //     console.log(e);
-        // }
-        }
+//         // try {
+//         //     Hero.insertMany(character , {unique: true});
+//         // } catch(e) {
+//         //     console.log(e);
+//         // }
+//         }
 
-    } catch(err) {
-        console.log(err);
-    }
-})
+//     } catch(err) {
+//         console.log(err);
+//     }
+// })
 
 app.get("/dexlist", async (req, res) => {           //read all documents
     try {
